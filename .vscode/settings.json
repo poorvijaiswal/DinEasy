@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/a6b2486c-8c4f-4ac8-b52f-5691bb409283/resourceGroups/dineaz/providers/Microsoft.Web/sites/dineaz",
+    "appService.deploySubpath": "."
+}
