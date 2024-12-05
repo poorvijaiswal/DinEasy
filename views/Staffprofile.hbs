@@ -28,17 +28,17 @@
                 <div class="card-body text-center">
                   <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
                     class="rounded-circle img-fluid" style="width: 150px;">
-                    <% ro.forEach(function(item) { %>
-                  <h5 class="my-3"><%= item.name %></h5>
-                  <p class="text-muted mb-1">Restaurant ID: <%= item.id %></p>
-                  <p class="text-muted mb-4">Restaurant Address: <%= item.addr %></p>
-                  <p class="text-muted mb-4">Expiration Date: <%= item.expiration_date %></p>
+                    {{#each ro}}
+                  <h5 class="my-3">{{this.name}}</h5>
+                  <p class="text-muted mb-1">Restaurant ID: {{id}}</p>
+                  <p class="text-muted mb-4">Restaurant Address: {{this.addr}}</p>
+                  <p class="text-muted mb-4">Expiration Date: {{this.expiration_date}}</p>
                     
                   <div class="d-flex justify-content-center mb-2">
                     <a href="/delete"><button type="button" class="btn btn-primary">Delete Membership</button></a>
                     <a href="/payrenew"> <button type="button" class="btn btn-outline-primary ms-1">Renew Membership</button></a>
                   </div>
-                  <% }); %>
+                  {{/each}}
                 </div>
               </div>
 
@@ -46,13 +46,13 @@
             <div class="col-lg-8">
               <div class="card mb-4">
                 <div class="card-body">
-                    <% rows.forEach(function(row) { %>
+                    {{#each rows}}
                   <div class="row">
                     <div class="col-sm-3">
                       <p class="mb-0">Staff Id</p>
                     </div>
                     <div class="col-sm-9">
-                      <p class="text-muted mb-0"><%= row.id %></p>
+                      <p class="text-muted mb-0">{{this.id}}</p>
                     </div>
                   </div>
                   <hr>
@@ -61,7 +61,7 @@
                       <p class="mb-0">Full Name</p>
                     </div>
                     <div class="col-sm-9">
-                      <p class="text-muted mb-0"><%= row.name %></p>
+                      <p class="text-muted mb-0">{{this.name}}</p>
                     </div>
                   </div>
                   <hr>
@@ -70,7 +70,7 @@
                       <p class="mb-0">Email</p>
                     </div>
                     <div class="col-sm-9">
-                      <p class="text-muted mb-0"><%= row.email %></p>
+                      <p class="text-muted mb-0">{{this.email}}</p>
                     </div>
                   </div>
                   <hr>
@@ -79,7 +79,7 @@
                       <p class="mb-0">Position</p>
                     </div>
                     <div class="col-sm-9">
-                      <p class="text-muted mb-0"><%= row.position %></p>
+                      <p class="text-muted mb-0">{{this.position}}</p>
                     </div>
                   </div>
                   <hr>
@@ -88,7 +88,7 @@
                       <p class="mb-0">Mobile</p>
                     </div>
                     <div class="col-sm-9">
-                      <p class="text-muted mb-0"><%= row.phoneno %></p>
+                      <p class="text-muted mb-0">{{this.phoneno}}</p>
                     </div>
                   </div>
                   <hr>
@@ -97,10 +97,10 @@
                       <p class="mb-0">Address</p>
                     </div>
                     <div class="col-sm-9">
-                      <p class="text-muted mb-0"><%= row.addr %></p>
+                      <p class="text-muted mb-0">{{this.addr}}</p>
                     </div>
                   </div>
-                  <% }); %>
+                  {{/each}}
                 </div>
               </div>
               
