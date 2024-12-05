@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
-var mysql = require('mysql2');
+var mysql = require('mysql');
 const { query } = require("express");
 const jwt=require("jsonwebtoken");
 const { log } = require('console');
@@ -22,7 +22,7 @@ const { log } = require('console');
 const con = mysql.createConnection({
     host:'localhost',
     user:'root',
-    password:'root123',
+    password:'Tiger',
     database:'onlinemenu'
 })
 

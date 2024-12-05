@@ -265,13 +265,13 @@ body {
   overflow: hidden; }
 
 .signup-image {
-  margin: 0 55px; }
+  margin: 0 55px;
+  width:70%;
+  margin-top: 45px;  
+}
 
 .form-title {
   margin-bottom: 33px; }
-
-.signup-image {
-  margin-top: 45px; }
 
 figure {
   margin-bottom: 50px;
